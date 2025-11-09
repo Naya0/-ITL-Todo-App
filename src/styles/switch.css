@@ -1,0 +1,55 @@
+.switch input[type="checkbox"] {
+  display: none;
+}
+
+.switch {
+  width: 120px;
+  height: 25px;
+  border-radius: 5px;
+  background: #5d5d5d;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.switch .switch-label {
+  width: 55px;
+  height: 24px;
+  font-size: 12px;
+  border-radius: 5px;
+
+  background: var(--button-main-backcolor);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.25s;
+}
+
+.switch-label span {
+  color: white;
+  font-size: 12px;
+}
+
+.switch-label_disable:hover {
+  cursor: pointer;
+}
+
+.switch > * {
+  justify-self: center;
+}
+
+.switch-label_disable {
+  font-size: 12px;
+
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.switch.right {
+  flex-direction: row-reverse;
+}

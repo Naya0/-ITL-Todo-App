@@ -1,0 +1,19 @@
+.input-text {
+  min-width: 170px;
+  height: 40px;
+
+  font-size: 14px;
+
+  border: none;
+  border-bottom: 1px solid var(--main-gray-line);
+  padding: 5px 10px;
+  flex-grow: 1;
+
+  background: transparent;
+}
+
+.input-text:focus,
+.input-text:active {
+  outline: none;
+  border-bottom: 1px solid white;
+}

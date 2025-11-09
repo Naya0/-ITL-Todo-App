@@ -1,0 +1,125 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  --main-gray-line: #f9f9f970;
+  --main-gray-line-dark: #838383;
+  --main-text-color: #313131;
+
+  --button-main-backcolor: #04040475;
+  --button-icon-backcolor: #3534345b;
+  --button-active-backcolor: #040404bd;
+
+  --bg-gray-item-active: #5d5d5d9c;
+  --bg-gray-item-hover: #4947479c;
+
+  --text-error-color: #831818;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--main-text-color);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+
+  overflow-y: auto;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.btn {
+  position: relative;
+
+  width: 150px;
+  height: 30px;
+
+  border: none;
+  border-radius: 5px;
+
+  background: var(--button-main-backcolor);
+  color: #d5d5d5;
+  transition: 0.25s;
+}
+
+.btn-icon {
+  background: var(--button-icon-backcolor);
+  border: none;
+  border-radius: 5px;
+
+  width: 30px;
+  height: 30px;
+}
+
+.btn,
+.btn-icon {
+  transition: background 0.25s, transform 0.2s;
+}
+
+.btn:hover,
+.btn-icon:hover {
+  background: var(--button-active-backcolor);
+
+  cursor: pointer;
+}
+
+.btn:focus,
+.btn:focus-visible,
+.btn-icon:focus,
+.btn-icon:focus-visible {
+  outline: none;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  background: url("../assets/back.jpg");
+  background-size: cover;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-col {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+}
+
+.error-message {
+  font-size: 12px;
+  color: var(--text-error-color);
+  margin: 8px 0;
+}
+
+@media (max-width: 480px) {
+  .btn {
+    width: 100px;
+  }
+  .container {
+    padding: 10px;
+  }
+}
